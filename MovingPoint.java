@@ -56,7 +56,7 @@ public class MovingPoint {
     	double dist = this.distance(anotherPoint);
     	double anotherPointMass = anotherPoint.getMass();
     	Tensor direction = this.directionFrom(anotherPoint);
-    	double coefficients = -1*anotherPointMass/Math.pow(dist, 1.5);
+    	double coefficients = -1*anotherPointMass/Math.pow(dist, 2);
     	
     	return new Velocity(coefficients*direction.getX(), coefficients*direction.getY());
     	
